@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Content.Views.LeftSideView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Grid.Row="0" Text="{Binding Date}" />
+        <Image Grid.Row="1" Source="https://t4.ftcdn.net/jpg/04/40/49/67/360_F_440496702_S9sws4p3umHIlIWMKK43kKGC4QJwriY9.jpg" Height="250" Visibility="{Binding ImageVisibility}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</UserControl>

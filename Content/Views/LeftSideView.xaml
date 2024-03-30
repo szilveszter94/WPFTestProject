@@ -10,6 +10,6 @@
         </Grid.RowDefinitions>
 
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Grid.Row="0" Text="{Binding Date}" />
-        <Image Grid.Row="1" Source="https://t4.ftcdn.net/jpg/04/40/49/67/360_F_440496702_S9sws4p3umHIlIWMKK43kKGC4QJwriY9.jpg" Height="250" Visibility="{Binding ImageVisibility}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image Grid.Row="1" Source="/Images/smile.png" Height="200" Visibility="{Binding ImageVisibility}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </UserControl>

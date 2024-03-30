@@ -12,7 +12,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="{Binding ProfileButtonText}" Command="" Height="45" Width="150" Foreground="White" Margin="5" FontSize="16" FontWeight="Bold" Background="Green" CommandParameter="Profile" >
+        <Button Content="{Binding ProfileButtonText}" Command="{Binding ShowDialogCommand}" Height="45" Width="150" Foreground="White" Margin="5" FontSize="16" FontWeight="Bold" Background="Green" CommandParameter="Profile" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" 

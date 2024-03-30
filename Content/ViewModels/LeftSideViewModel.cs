@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Content.ViewModels
 {
-    class LeftSideViewModel : BindableBase
+    class LeftSideViewModel : BindableBase, INavigationAware
     {
         private string? _date;
         private string? _imageVisibility = "Hidden";
@@ -28,6 +28,24 @@ namespace Content.ViewModels
         public LeftSideViewModel()
         {
             Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        }
+
+        public void OnNavigatedTo(NavigationContext navigationContext)
+        {
+            if (navigationContext.Parameters.ContainsKey("visibility"))
+            {
+                ImageVisibility = navigationContext.Parameters.GetValue<string>("visibility");
+            }
+        }
+
+        public bool IsNavigationTarget(NavigationContext navigationContext)
+        {
+            return true;
+        }
+
+        public void OnNavigatedFrom(NavigationContext navigationContext)
+        {
+
         }
     }
 }

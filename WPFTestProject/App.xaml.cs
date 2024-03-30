@@ -1,5 +1,6 @@
 ﻿using Content;
 using Header;
+using Footer;
 using Prism.DryIoc;
 using Prism.Ioc;
 using Prism.Modularity;
@@ -28,6 +29,7 @@ namespace WPFTestProject
         {
             moduleCatalog.AddModule<HeaderModule>();
             moduleCatalog.AddModule<ContentModule>();
+            moduleCatalog.AddModule<FooterModule>();
         }
     }
 }

@@ -53,7 +53,7 @@ _Below are the steps to install and set up the app:_
 
 1. Clone the repository:
    ```sh
-   git clone <https://github.com/szilveszter94/WPFTestProject>
+   git clone https://github.com/szilveszter94/WPFTestProject
    ```
 2. Open the solution in Visual Studio.
 

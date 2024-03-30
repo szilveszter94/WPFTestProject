@@ -1,4 +1,5 @@
-﻿using Header;
+﻿using Content;
+using Header;
 using Prism.DryIoc;
 using Prism.Ioc;
 using Prism.Modularity;
@@ -26,6 +27,7 @@ namespace WPFTestProject
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             moduleCatalog.AddModule<HeaderModule>();
+            moduleCatalog.AddModule<ContentModule>();
         }
     }
 }

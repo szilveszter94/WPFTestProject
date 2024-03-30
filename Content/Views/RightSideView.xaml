@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="Content.Views.RightSideView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Image Grid.Row="1" Source="{Binding ImageUrl}" Height="Auto" Visibility="{Binding ImageVisibility}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</UserControl>

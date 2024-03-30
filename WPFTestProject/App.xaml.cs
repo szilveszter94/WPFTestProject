@@ -1,4 +1,7 @@
-﻿using Prism.Ioc;
+﻿using Header;
+using Prism.DryIoc;
+using Prism.Ioc;
+using Prism.Modularity;
 using System.Windows;
 using WPFTestProject.Views;
 
@@ -7,7 +10,7 @@ namespace WPFTestProject
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App
+    public partial class App : PrismApplication
     {
         protected override Window CreateShell()
         {
@@ -17,6 +20,11 @@ namespace WPFTestProject
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
 
+        }
+
+        protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
+        {
+            moduleCatalog.AddModule<HeaderModule>();
         }
     }
 }

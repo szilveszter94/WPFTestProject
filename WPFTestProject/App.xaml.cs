@@ -3,6 +3,7 @@ using Prism.DryIoc;
 using Prism.Ioc;
 using Prism.Modularity;
 using System.Windows;
+using WPFTestProject.Dialogs;
 using WPFTestProject.Views;
 
 namespace WPFTestProject
@@ -19,7 +20,7 @@ namespace WPFTestProject
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterDialog<MessageDialog, MessageDialogViewModel>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

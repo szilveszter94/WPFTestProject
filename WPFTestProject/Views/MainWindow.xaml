@@ -5,6 +5,28 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="350" Width="525" >
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" BorderBrush="Gray" BorderThickness="2 2 2 0">
+            <HeaderedContentControl prism:RegionManager.RegionName="header"/>
+        </Border>
+        <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="7*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Row="0" BorderBrush="Gray" BorderThickness="0 0 2 0">
+                    <ContentControl Grid.Column="0" prism:RegionManager.RegionName="left_side" />
+                </Border>
+                <ContentControl Grid.Column="1" prism:RegionManager.RegionName="right_side" />
+            </Grid>
+        </Border>
+        <Border Grid.Row="2" BorderBrush="Gray" BorderThickness="2 0 2 2">
+            <HeaderedContentControl prism:RegionManager.RegionName="footer" />
+        </Border>
     </Grid>
 </Window>

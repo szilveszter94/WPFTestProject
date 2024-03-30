@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="Footer.Views.FooterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid Height="50">
+        <TextBlock Text="{Binding ImageUrl}" FontSize="18" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" />
+    </Grid>
+</UserControl>

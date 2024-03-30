@@ -41,6 +41,7 @@ namespace Header.ViewModels
                 parameters.Add("imgUrl", selectedImagePath);
                 _regionManager.RequestNavigate("right_side", "RightSideView", parameters);
                 _regionManager.RequestNavigate("left_side", "LeftSideView", parameters);
+                _regionManager.RequestNavigate("footer", "FooterView", parameters);
             }
         }
 

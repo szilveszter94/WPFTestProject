@@ -4,7 +4,7 @@
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <StackPanel Orientation="Horizontal" Height="60" VerticalAlignment="Center">
-        <Button Content="{Binding OpenImageButtonText}" Command="" Height="45" Width="150" Foreground="White" Margin="5" FontSize="16" FontWeight="Bold" Background="Green" CommandParameter="OpenImage" >
+        <Button Content="{Binding OpenImageButtonText}" Command="{Binding OpenImageCommand}" Height="45" Width="150" Foreground="White" Margin="5" FontSize="16" FontWeight="Bold" Background="Green" CommandParameter="OpenImage" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" 

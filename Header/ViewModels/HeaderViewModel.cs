@@ -21,12 +21,12 @@ namespace Header.ViewModels
         public HeaderViewModel(IDialogService dialogService, IRegionManager regionManager)
         {
             ShowDialogCommand = new DelegateCommand(ShowDialog);
-            OpenImageCommand = new DelegateCommand(Navigate);
+            OpenImageCommand = new DelegateCommand(OpenImageAndRequestNavigate);
             _dialogService = dialogService;
             _regionManager = regionManager;
         }
 
-        private void Navigate()
+        private void OpenImageAndRequestNavigate()
         {
             Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
             openFileDialog.Filter = "Image Files (*.jpg;*.bmp;*.png;)|*.jpg;*.bmp;*.png;";

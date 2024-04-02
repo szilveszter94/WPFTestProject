@@ -1,10 +1,6 @@
-﻿using Prism.Mvvm;
+﻿using System.Timers;
+using Prism.Mvvm;
 using Prism.Regions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Content.ViewModels
 {
@@ -12,11 +8,12 @@ namespace Content.ViewModels
     {
         private string? _date;
         private string? _imageVisibility = "Hidden";
+        private System.Timers.Timer _timer;
 
         public string? Date
         {
             get { return _date; }
-            set { _date = value; }
+            set { SetProperty(ref _date, value); }
         }
 
         public string? ImageVisibility
@@ -27,7 +24,22 @@ namespace Content.ViewModels
 
         public LeftSideViewModel()
         {
+            _timer = new System.Timers.Timer(1000);
+            _timer.Elapsed += TimerElapsed;
+            _timer.AutoReset = true;
+            _timer.Enabled = true;
+            
+            UpdateDate();
+        }
+        
+        private void UpdateDate()
+        {
             Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        }
+        
+        private void TimerElapsed(object sender, ElapsedEventArgs e)
+        {
+            UpdateDate();
         }
 
         public void OnNavigatedTo(NavigationContext navigationContext)
